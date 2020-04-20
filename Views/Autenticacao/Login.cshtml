@@ -1,0 +1,90 @@
+﻿@model FEL_JAMIRA_WEB_APP.Models.Areas.Autenticacao.LoginRequisicao
+
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <link rel="shortcut icon" href="~/Icons/map-marked-alt-solid.ico" type="image/x-icon" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container body-content">
+        <div class="container">
+            <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+
+                <div class="row">
+                        <div class="result logo">
+                            <img class="imagem" src="~/Imagens/Logo.PNG" alt="Image" />
+                        </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title text-center">Login</div>
+                    </div>
+
+                    <div class="panel-body">
+
+
+                        @using (Html.BeginForm())
+                        {
+                        <form name="form" id="form" class="form-horizontal">
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control", placeholder = "Usuário" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                @Html.EditorFor(model => model.Senha, "Password", new { htmlAttributes = new { @class = "form-control", placeholder = "Senha" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+
+                            <!-- Button -->
+                            <div class="col-sm-12 controls">
+                                <button type="submit" class="btn btn-primary pull-right" style="margin-top:2%;"><i class="glyphicon glyphicon-log-in"></i>Log in</button>
+                            </div>
+                        </form>
+                                }
+                            
+                        </div>
+                </div>
+                <h2 class="center">Register for free!</h2>
+                <div class="form-horizontal center">
+                    <div class="mesmaLinha">
+                        @Html.ActionLink("I'm a Customer", "RegistrarCliente", "Autenticacao", new { @class = "btn btn-primary btn-lg mesmoTamanho" })
+                        <p style="padding:1%;"><b>or</b></p>
+                        @Html.ActionLink("I'm a Park", "RegistrarEstacionamento", "Autenticacao", new { @class = "btn btn-success btn-lg mesmoTamanho" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="particles"></div>
+
+        <hr />
+
+        <footer class="center">
+            <p>&copy; @DateTime.Now.Year - JAMIRA - All rights reserved.</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/loginJs")
+    @Styles.Render("~/Content/loginCss")
+</body>
+</html>

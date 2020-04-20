@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "Creditos";
+    Layout = "~/Views/Shared1/_Layout.cshtml";
+}
+@Scripts.Render("~/bundles/Creditos")
+@Styles.Render(("~/Content/menuUsuarios"))
+
+
+    <div class="container-fluid">
+        <div class="slidecontainer">
+            <div class="slidecontainer">
+                <p>
+                    Please slide to get the desired value:
+                </p>
+                <input type="range" min="1" max="500" value="0" class="slider" id="myRange" style="margin-top: 10%;">
+                <p style="text-align: center;margin-top: 7%;"><b>Value: </b><span id="demo"></span></p>
+            </div>
+        </div>
+        <button id="comprarCredito" class="btn btn-success btn-icon-split">
+            <span class="icon text-white-50">
+                <i class="fas fa-shopping-cart"></i>
+            </span>
+            <span class="text">Next</span>
+        </button>
+
+        <div id="Pagamentos" class="card mb-4 py-3 border-left-primary" style="margin-top:5%; display: none;">
+            <div class="card-header">
+                Operation Processing(Simulator)
+            </div>
+            <div class="card-body">
+                <div class="row" style="flex-wrap: nowrap;">
+                    <input style="width: 100%;display:inline-block;" type="radio" id="IdBandeira" name="Bandeira" value="Visa"> <img src="~/Imagens/Visa.PNG" style="width:5%; height: 5%;" /> <br>
+                    <input style="width: 100%;display:inline-block;" type="radio" id="IdBandeira" name="Bandeira" value="MasterCard"> <img src="~/Imagens/MasterCard.PNG" style="width:5%; height: 5%;" /> <br>
+                    <input style="width: 100%;display:inline-block;" type="radio" id="IdBandeira" name="Bandeira" value="Elo"> <img src="~/Imagens/Elo.PNG" style="width:5%; height: 5%;" /> <br>
+                    <input style="width: 100%;display:inline-block;" type="radio" id="IdBandeira" name="Bandeira" value="DinersClub"> <img src="~/Imagens/DinersClub.PNG" style="width:5%; height: 5%;" /> <br>
+                    <input style="width: 100%;display:inline-block;" type="radio" id="IdBandeira" name="Bandeira" value="AmericanExpress"> <img src="~/Imagens/AmericanExpress.PNG" style="width:5%; height: 5%;" /> <br>
+                </div>
+                <div class="form-group" style="margin-top: 2%;">
+                    <input type="text" class="form-control form-control-user" id="NomeTitular" placeholder="Name of card holder(Anything)">
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user" id="NumeroCartao" placeholder="Card number(Anything)">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-user" id="CVV" placeholder="CVV">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-user" id="Vencimento" placeholder="Card Expiration">
+                    </div>
+                </div>
+                <button id="RealizarPagamento" class="btn btn-primary btn-icon-split" style="float:left;">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <span class="text">Payment</span>
+                </button>
+                <div id="aguardar" class="spinner-border text-primary" role="status" style="display:none; float:left;">
+                    <span class="sr-only">Wait...</span>
+                </div>
+                <img src="~/Imagens/PagSeguro.PNG" style="float:right; width: 28%;" />
+            </div>
+        </div>
+
+        <div class="modal fade" id="fracasso" tabindex="-4" role="dialog" aria-labelledby="Fracasso" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-danger btn-circle">
+                            :/
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        We were unable to fulfill your request!
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="sucesso" tabindex="-3" role="dialog" aria-labelledby="Sucesso" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-success btn-circle">
+                            <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        successfully purchased
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-secondary" href="/Menu/Cliente">Ok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @Scripts.Render("~/bundles/menuCliente")

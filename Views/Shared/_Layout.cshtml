@@ -1,0 +1,78 @@
+﻿@{
+    bool inserteAlerta = ViewBag.InsereAlerta;
+    string nome = ViewBag.Nickname;
+    string mensagem = ViewBag.Cadastrar;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top" style="border-color:#b3b1b1;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("JAMIRA", "Index", "Menu", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">@Html.ActionLink("Menu", "Index", "Menu")</li>
+                    <li>@Html.ActionLink("Meus Dados", "MeusDados", "Menu")</li>
+                    <li>@Html.ActionLink("Fale Conosco", "FaleConosco", "Menu")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (inserteAlerta)
+                    {
+                        <li id="alertas" class="dropdown" aria-label="Você tem novos avisos!" data-balloon-pos="left">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <span class="badge">1</span>
+                                <span class="glyphicon glyphicon-bell"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li style="display: inline-flex;">
+                                    <a data-toggle="modal" data-target="#modalCadastro">
+                                        <span class="glyphicon glyphicon-warning-sign"></span> @mensagem
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-user"></span> Olá, @nome <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Desconectar", "DesconectarUsuario", "Autenticacao")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <footer style="background-color:#e7e7e7;" class="footerClasse">
+        <div class="center">
+            <p>&copy; @DateTime.Now.Year - FEL_JAMIRA - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/menuUsuarios")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @RenderSection("Styles", required: false)
+</body>
+</html>

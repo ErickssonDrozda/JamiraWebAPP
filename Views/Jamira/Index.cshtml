@@ -1,0 +1,379 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jamira</title>
+
+    <link href="~/Content/LandingPage/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/LandingPage/all.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/LandingPage/agency.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="~/Icons/map-marked-alt-solid.ico" type="image/x-icon" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <style>
+
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 400px; /* The height is 400 pixels */
+            width: 100%; /* The width is the width of the web page */
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Jamira</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#quemsomos">Goal(Read me please)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#nossahistoria">Quick Guide(Read me too)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Parks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Talk to me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/Autenticacao/Login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Welcome to JAMIRA!</div>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/Autenticacao/Login">Already a Customer</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#quemsomos">Know me</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Objetivo -->
+    <section class="page-section" id="quemsomos">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Goal</h2>
+                    <div align="justify">
+                        <h3 class="section-subheading text-muted">
+                            Show me that I know how to create a website. <i class="fas fa-grin-squint-tears"></i></br></br>
+
+                            Ok...This was a Course Completion project at the college focused on the parking sector. Jamira's mission is to provide solutions for drivers and parking lots. Our main customers are the users who depend on their vehicles for mobility. Created in 2018, this part of the system together with the API were my responsibility, Ericksson de Souza Drozda, in Curitiba, Paraná, Brazil.</br></br>
+                            <b>Programming Language:</b> C # using Entity Framework.</br>
+                            <b>Database:</b> SQL Server.</br>
+                            <b>Design Pattern used to build the system:</b> Model View Controller.</br></br>
+                            All of my projects is available on my github! See there.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-mobile fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Mobile <br> Application<br>(Other members of the group did.)</h4>
+                    <div align="justify">
+                        <p class="text-muted"><!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.--></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Web <br> Pages</h4>
+                    <div align="justify">
+                        <p class="text-muted"><!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.--></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-desktop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Park Administration<br>(Other members of the group did.)</h4>
+                    <div align="justify">
+                        <p class="text-muted"><!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorial -->
+    <section class="bg-light page-section" id="nossahistoria">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Quick Guide</h2>
+                    <h3 class="section-subheading text-muted">See in a simple way how to use the system</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img style="margin-top: 25%;" class="rounded-circle img-fluid" src="~/Imagens/LandingPage/register.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Create Accounts</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        For a good experience of use and understanding.
+                                        Register two accounts, one as a customer and the other as a parking
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/Imagens/LandingPage/warnings.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Follow the Alerts</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Always do what the alert suggests, regardless of the type of account</p>
+                                    <p class="text-muted">Within the system. you need to register a parking address and a car for the customer.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img style="margin-top: 25%;" class="rounded-circle img-fluid" src="~/Imagens/LandingPage/firstsimulator.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Entrance Simulator</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        For the first simulation, the system does not charge the customer's balance.
+                                        go to 'Car Entrance Simulator', select and confirm a parking
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img style="margin-top:25%;" class="rounded-circle img-fluid" src="~/Imagens/LandingPage/confirmfirst.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Park Confirm</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Logged into the parking lot. Go to 'Open Requests'. You can approve or decline the request for new customers in your parking lot</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img style="margin-top: 25%;" class="rounded-circle img-fluid" src="~/Imagens/LandingPage/leaveSimulator.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Leave Simulator</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        When you choose to leave the parking lot, you can go back to 'Car Entrance Simulator' to request the exit. At any time you can press the green button, he will understand your process by its status.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img style="margin-top:25%;" class="rounded-circle img-fluid" src="~/Imagens/LandingPage/leaveConfirm.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Park Confirm Again</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Go to 'Requests to Finalize' and finish the action.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/Imagens/LandingPage/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Explore what the system has to offer</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">See reports, status, comment, do everything the site has to offer, without any responsibility and commitment, after all, it is just a simulator.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>
+                                    Find out more 
+                                    <br>about me at:
+                                    <br /><a href="https://www.linkedin.com/in/ericksson-souza-drozda-116430125/">My Linkedin</a>
+                                </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parks -->
+    <section class="page-section" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Parks</h2>
+                    <h3 class="section-subheading text-muted">
+                        See some of our partner car parks.</br>
+                        (The marked locations are not true, just how the system would work).
+                    </h3>
+                </div>
+            </div>
+
+
+            <div id="map">
+
+
+            </div>
+            <script>
+                // Initialize and add the map
+                function initMap() {
+                    // The location of Uluru
+                    var uluru = { lat: -25.4297127, lng: -49.2741805 };
+                    var uluru1 = { lat: -25.4269081, lng: -49.2639545 };
+                    var uluru2 = { lat: -25.4409947, lng: -49.2795614 };
+                    var uluru3 = { lat: -25.405377, lng: -49.3304994 };
+                    var uluru4 = { lat: -25.426649, lng: -49.2748831 };
+                    var uluru5 = { lat: -25.430660, lng: -49.267899 };
+                    var uluru6 = { lat: -25.4409947, lng: -49.2795614 };
+                    var uluru7 = { lat: -25.435133, lng: -49.2753866 };
+                    var uluru8 = { lat: -25.433748, lng: -49.2777538 };
+                    var uluru9 = { lat: -25.4123725, lng: -49.2268303 };
+
+
+
+                    // The map, centered at Uluru
+                    var map = new google.maps.Map(
+                        document.getElementById('map'), { zoom: 13, center: uluru });
+                    // The marker, positioned at Uluru
+                    var marker = new google.maps.Marker({ position: uluru, map: map });
+                    var marker = new google.maps.Marker({ position: uluru1, map: map });
+                    var marker = new google.maps.Marker({ position: uluru2, map: map });
+                    var marker = new google.maps.Marker({ position: uluru3, map: map });
+                    var marker = new google.maps.Marker({ position: uluru4, map: map });
+                    var marker = new google.maps.Marker({ position: uluru5, map: map });
+                    var marker = new google.maps.Marker({ position: uluru8, map: map });
+                    var marker = new google.maps.Marker({ position: uluru9, map: map });
+                }
+            </script>
+
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDuaVMsfVTbOKZLcx0U0gNOGBAr2fbHCI&callback=initMap">
+            </script>
+
+        </div>
+        <br />
+    </section>
+
+    <!-- Fale Comigo -->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Talk with Me</h2>
+                    <h3 class="section-subheading text-muted">Contribute with my example website. Send suggestions or doubts.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please, Say your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="email" type="email" placeholder="Email" required="required" data-validation-required-message="Please, Say your email.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="phone" type="tel" placeholder="Telephone" required="required" data-validation-required-message="Please, Say your Telephone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" placeholder="Type your message here! " required="required" data-validation-required-message="White field. Please, type a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <span class="copyright"><p>&copy; @DateTime.Now.Year - JAMIRA - All rights reserved.</p></span>
+        </div>
+    </footer>
+
+    <script src="~/Scripts/LandingPage/jquery.min.js"></script>
+    <script src="~/Scripts/LandingPage/jquery.easing.min.js"></script>
+    <script src="~/Scripts/LandingPage/jqBootstrapValidation.js"></script>
+    <script src="~/Scripts/LandingPage/contact_me.js"></script>
+    <script src="~/Scripts/LandingPage/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/LandingPage/agency.min.js"></script>
+</body>
+</html>

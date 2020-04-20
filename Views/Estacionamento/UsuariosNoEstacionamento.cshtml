@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Usuarios no Estacionamento";
+    Layout = "~/Views/Shared1/_Layout.cshtml";
+    List<FEL_JAMIRA_WEB_APP.Models.Areas.Estacionamento.Solicitantes> solicitantes = ViewBag.Solicitacoes;
+}
+
+    <div class="container-fluid" style="justify-content: center; display: block;">
+        @if (solicitantes.Count > 0)
+        {
+            foreach (var item in solicitantes)
+            {
+
+                <div class="card mb-4 py-3 border-bottom-primary" style="width:100%;" id="@item.IdSolicitacao--">
+                    <div class="card-body" style="text-align: center;">
+                        <b>Name: </b>@item.NomeCliente - <b>Car: </b>@item.Carro - <b>Plate Car: </b>@item.PlacaCarro - <b>Active Since:  </b>@item.PeriodoDe
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p style="text-align:center;"><b>You currently have no active customers.</b></p>
+        }
+    </div>

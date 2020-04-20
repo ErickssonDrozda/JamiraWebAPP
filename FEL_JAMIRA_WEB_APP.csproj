@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7240C58C-3533-41CA-B513-E43D0993AD07}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FEL_JAMIRA_WEB_APP</RootNamespace>
+    <AssemblyName>FEL_JAMIRA_WEB_APP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <IISExpressSSLPort>44328</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="RestClient.Net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=e5ebafcd8cc6b3d3, processorArchitecture=MSIL">
+      <HintPath>packages\RestClient.Net.2.1.0\lib\net45\RestClient.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.106.6.10\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AutenticacaoController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\EstacionamentoController.cs" />
+    <Compile Include="Controllers\JamiraController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Areas\Autenticacao\CadastroCliente.cs" />
+    <Compile Include="Models\Areas\Autenticacao\CadastroEstacionamento.cs" />
+    <Compile Include="Models\Areas\Autenticacao\LoginRequisicao.cs" />
+    <Compile Include="Models\Areas\Autenticacao\Usuario.cs" />
+    <Compile Include="Models\Areas\Cliente\CarroCliente.cs" />
+    <Compile Include="Models\Areas\Cliente\CarroRetorno.cs" />
+    <Compile Include="Models\Areas\Cliente\EstacionamentosDoCliente.cs" />
+    <Compile Include="Models\Areas\Cliente\StatusCliente.cs" />
+    <Compile Include="Models\Areas\Cliente\TransacoesDoCliente.cs" />
+    <Compile Include="Models\Areas\ContaDeposito\Banco.cs" />
+    <Compile Include="Models\Areas\ContaDeposito\ContaDeposito.cs" />
+    <Compile Include="Models\Areas\ContaDeposito\TipoConta.cs" />
+    <Compile Include="Models\Areas\Estacionamento\DadosRapidosEstacionamento.cs" />
+    <Compile Include="Models\Areas\Estacionamento\DadosSolicitantes.cs" />
+    <Compile Include="Models\Areas\Estacionamento\EnderecoEstacionamento.cs" />
+    <Compile Include="Models\Areas\Estacionamento\Recebimentos.cs" />
+    <Compile Include="Models\Areas\Estacionamento\RecebimentosFiltrados.cs" />
+    <Compile Include="Models\Areas\Estacionamento\Solicitantes.cs" />
+    <Compile Include="Models\Areas\Estacionamento\UsuariosDoEstacionamento.cs" />
+    <Compile Include="Models\Areas\Localizacao\Cidade.cs" />
+    <Compile Include="Models\Areas\Localizacao\Endereco.cs" />
+    <Compile Include="Models\Areas\Localizacao\Estado.cs" />
+    <Compile Include="Models\Areas\Modelagem do Sistema\Carro.cs" />
+    <Compile Include="Models\Areas\Modelagem do Sistema\CategoriaFaleConosco.cs" />
+    <Compile Include="Models\Areas\Modelagem do Sistema\Cliente.cs" />
+    <Compile Include="Models\Areas\Modelagem do Sistema\CompraCreditos.cs" />
+    <Compile Include="Models\Areas\Modelagem do Sistema\Estacionamento.cs" />
+    <Compile Include="Models\Areas\Modelagem do Sistema\FaleConosco.cs" />
+    <Compile Include="Models\Areas\Modelagem do Sistema\Marca.cs" />
+    <Compile Include="Models\Areas\Modelagem do Sistema\Pessoa.cs" />
+    <Compile Include="Models\Areas\Modelagem do Sistema\Solicitacao.cs" />
+    <Compile Include="Models\Areas\MultiModelação\DadosCliente.cs" />
+    <Compile Include="Models\Areas\MultiModelação\DadosEstacionamento.cs" />
+    <Compile Include="Models\Areas\MultiModelação\TotalEstacionamentosMensais.cs" />
+    <Compile Include="Models\Areas\Util\MensagemEnvio.cs" />
+    <Compile Include="Models\Areas\Util\ResponseViewModel.cs" />
+    <Compile Include="Models\Areas\Util\ResponseViewModelGeneric.cs" />
+    <Compile Include="Models\Areas\Util\AcessoToken.cs" />
+    <Compile Include="MyRoleProvider\SiteRole.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Areas\Autenticacao\CustomValidationCPFAttribute.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\AdministradorAutenticacao.cs" />
+    <Compile Include="Util\Helpers.cs" />
+    <Compile Include="Util\MemoryPostedFile.cs" />
+    <Compile Include="Util\UploadFoto.cs" />
+    <Compile Include="Util\Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Areas\Carro.css" />
+    <Content Include="Content\Areas\Estacionamento.css" />
+    <Content Include="Content\Areas\Login.css" />
+    <Content Include="Content\Areas\MenuUsuarios.css" />
+    <Content Include="Content\Areas\Simulator.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\LandingPage\agency.min.css" />
+    <Content Include="Content\LandingPage\all.min.css" />
+    <Content Include="Content\LandingPage\bootstrap.min.css" />
+    <Content Include="Content\Menus\all.css" />
+    <Content Include="Content\Menus\dataTables.bootstrap4.css" />
+    <Content Include="Content\Menus\sb-admin-2.css" />
+    <Content Include="Content\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\webfonts\fa-solid-900.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Imagens\AmericanExpress.PNG" />
+    <Content Include="Imagens\BB.PNG" />
+    <Content Include="Imagens\Bradesco.PNG" />
+    <Content Include="Imagens\Caixa.PNG" />
+    <Content Include="Imagens\desconhecido.PNG" />
+    <Content Include="Imagens\DinersClub.PNG" />
+    <Content Include="Imagens\Elo.PNG" />
+    <Content Include="Imagens\Itau.PNG" />
+    <Content Include="Imagens\LandingPage\4.jpg" />
+    <Content Include="Content\Imagens\LandingPage\bg-events.png" />
+    <Content Include="Content\Imagens\LandingPage\map-image.png" />
+    <Content Include="Imagens\LandingPage\confirmfirst.jpg" />
+    <Content Include="Imagens\LandingPage\firstsimulator.jpg" />
+    <Content Include="Imagens\LandingPage\leaveConfirm.jpg" />
+    <Content Include="Imagens\LandingPage\leaveSimulator.jpg" />
+    <Content Include="Imagens\LandingPage\register.jpg" />
+    <Content Include="Imagens\LandingPage\warnings.jpg" />
+    <Content Include="Imagens\Logo.PNG" />
+    <Content Include="Imagens\MasterCard.PNG" />
+    <Content Include="Imagens\PagSeguro.PNG" />
+    <Content Include="Imagens\Santander.PNG" />
+    <Content Include="Imagens\Visa.PNG" />
+    <Content Include="Icons\map-marked-alt-solid.ico" />
+    <Content Include="ReleaseNotes.css" />
+    <Content Include="Scripts\Areas\Carro.js" />
+    <Content Include="Scripts\Areas\Creditos.js" />
+    <Content Include="Scripts\Areas\Dados.js" />
+    <Content Include="Scripts\Areas\Estacionamento.js" />
+    <Content Include="Scripts\Areas\FaleConosco.js" />
+    <Content Include="Scripts\Areas\Login.js" />
+    <Content Include="Scripts\Areas\MenuCliente.js" />
+    <Content Include="Scripts\Areas\MenuFornecedor.js" />
+    <Content Include="Content\Ballon.css" />
+    <Content Include="Scripts\Areas\Simulador.js" />
+    <Content Include="Scripts\Areas\SolicitacaoAberto.js" />
+    <Content Include="Scripts\Areas\SolicitacaoFinalizar.js" />
+    <Content Include="Scripts\Areas\Util.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\webfonts\fa-solid-900.woff2" />
+    <None Include="Properties\PublishProfiles\jamira - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\jamira - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\LandingPage\agency.min.js" />
+    <Content Include="Scripts\LandingPage\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\LandingPage\contact_me.js" />
+    <Content Include="Scripts\LandingPage\jqBootstrapValidation.js" />
+    <Content Include="Scripts\LandingPage\jquery.easing.min.js" />
+    <Content Include="Scripts\LandingPage\jquery.min.js" />
+    <Content Include="Scripts\Mask.js" />
+    <Content Include="Content\Areas\boot.css" />
+    <Content Include="Scripts\Menu\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\Menu\datatables-demo.js" />
+    <Content Include="Scripts\Menu\dataTables.bootstrap4.min.js" />
+    <Content Include="Scripts\Menu\jquery.dataTables.min.js" />
+    <Content Include="Scripts\Menu\jquery.easing.min.js" />
+    <Content Include="Scripts\Menu\jquery.min.js" />
+    <Content Include="Scripts\Menu\sb-admin-2.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Util.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Autenticacao\Login.cshtml" />
+    <Content Include="Views\Autenticacao\RegistrarCliente.cshtml" />
+    <Content Include="Views\Autenticacao\RegistrarEstacionamento.cshtml" />
+    <Content Include="Views\Menu\Cliente.cshtml" />
+    <Content Include="Views\Menu\Estacionamento.cshtml" />
+    <Content Include="Views\Estacionamento\MeusDados.cshtml" />
+    <Content Include="Views\Cliente\MeusDados.cshtml" />
+    <Content Include="Views\Shared1\Error.cshtml" />
+    <Content Include="Views\Shared1\_Layout.cshtml" />
+    <Content Include="Views\Estacionamento\Endereco.cshtml" />
+    <Content Include="Views\Cliente\Carro.cshtml" />
+    <Content Include="Views\Cliente\Creditos.cshtml" />
+    <Content Include="Views\Estacionamento\SolicitacoesEmAberto.cshtml" />
+    <Content Include="Views\Estacionamento\SolicitacoesParaFinalizar.cshtml" />
+    <Content Include="Views\Estacionamento\UsuariosNoEstacionamento.cshtml" />
+    <Content Include="Views\Menu\FaleConosco.cshtml" />
+    <Content Include="Views\Jamira\Index.cshtml" />
+    <Content Include="Views\Cliente\CarEntranceSimulator.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icons\map-marked-alt-solid.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52886</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52886/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://jamira.gear.host</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "Menu";
+    string saldo = ViewBag.Saldo;
+    Layout = "~/Views/Shared1/_Layout.cshtml";
+    var estacionamentos = ViewBag.Estacionamentos as List<FEL_JAMIRA_WEB_APP.Models.Areas.Cliente.EstacionamentosDoCliente>;
+    var transacoes = ViewBag.Transacoes as List<FEL_JAMIRA_WEB_APP.Models.Areas.Cliente.TransacoesDoCliente>;
+    FEL_JAMIRA_WEB_APP.Models.Areas.Cliente.StatusCliente statusCliente = ViewBag.StatusCliente;
+}
+
+    <div class="container-fluid">
+
+        <div class="row" style="justify-content:center;">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary"><h6><b>Buy Credits</b></h6></div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align:center;">
+                                    <a href="/Cliente/Creditos" class="btn btn-primary btn-circle">
+                                        <i class="fas fa-hand-holding-usd"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning"><h6><b>Currently Status</b></h6></div>
+                                <div class="h6 mb-0 font-weight-bold text-gray-800">@statusCliente.Status</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success"><h6><b>My Credits</b></h6></div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">$@saldo</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Dashboard</h1>
+        <p class="mb-4">Here you'll find information about your latest activities related to your parking.</p>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Lastest Parkings</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Park Name:</th>
+                                <th>Entrance:</th>
+                                <th>Leave:</th>
+                                <th>Value:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             @foreach (var item in estacionamentos)
+                             {
+                                 <tr>
+                                     <td>@item.NomeEstacionamento</td>
+                                     <td>@item.PeriodoDe.ToString()</td>
+                                     <td>@item.PeriodoAte.ToString()</td>
+                                     <td><div style="float:right;">$@Math.Round(item.ValorTotal, 2)</div></td>
+                                 </tr>
+                             }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Last Transactions</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Value:</th>
+                                <th>Date:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in transacoes)
+                            {
+                                <tr>
+                                    <td>$@string.Format("{0:N}", item.Valor)</td>
+                                    <td>@item.DataTransacao.ToString()</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- /.container-fluid -->

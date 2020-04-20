@@ -1,0 +1,89 @@
+﻿@model FEL_JAMIRA_WEB_APP.Models.Areas.Modelagem_do_Sistema.FaleConosco
+
+@{
+    ViewBag.Title = "Fale Conosco";
+    Layout = "~/Views/Shared1/_Layout.cshtml";
+    SelectList Categoria = ViewBag.Categorias as SelectList;
+}
+
+@Scripts.Render("~/bundles/menuFaleConosco")
+
+<div class="container-fluid">
+    @using (Html.BeginForm("CadastrarFaleConosco", "Menu", FormMethod.Post, new { id = "formFaleConosco" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdCategoria, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.IdCategoria, Categoria != null ? Categoria.Items as List<SelectListItem> : new List<SelectListItem>(), new { @id="IdCategoria", @class = "form-control col-md-5" })
+                    @Html.ValidationMessageFor(model => model.IdCategoria, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Texto, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Texto, 7, 80, new { htmlAttributes = new { @id="IdTexto", @style = "width: 100%;" } })
+                    @Html.ValidationMessageFor(model => model.Texto, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button id="cadastrar" class="btn btn-success">Send</button>
+                </div>
+                <div style="width: 100%;height: 100%;position: absolute;">
+                    <div id="loading" class="spinner-border text-primary" role="status" style="display:none;">
+                        <span class="sr-only">Wait...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="modal fade" id="fracasso" tabindex="-4" role="dialog" aria-labelledby="Fracasso" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sorry try later</h5>
+            </div>
+            <div class="modal-body">
+                <button class="btn btn-danger btn-circle">
+                    X
+                </button>
+
+                It was not possible to fulfill your request!
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="sucesso" tabindex="-3" role="dialog" aria-labelledby="Sucesso" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucess!</h5>
+            </div>
+            <div class="modal-body">
+                <button class="btn btn-success btn-circle">
+                    <i class="fas fa-check"></i>
+                </button>
+
+                Your request was successfully made!
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+

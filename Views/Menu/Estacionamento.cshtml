@@ -1,0 +1,169 @@
+﻿
+@{
+    ViewBag.Title = "Menu";
+    Layout = "~/Views/Shared1/_Layout.cshtml";
+    var recebimentos = ViewBag.Recebimentos as List<FEL_JAMIRA_WEB_APP.Models.Areas.Estacionamento.RecebimentosFiltrados>;
+    var usuarios = ViewBag.Usuarios as List<FEL_JAMIRA_WEB_APP.Models.Areas.Estacionamento.UsuariosDoEstacionamento>;
+    int usuariosAtivos = ViewBag.UsuariosAtivos;
+    int valorHora = ViewBag.ValorHora;
+}
+
+@functions {
+    string GetMes(int mes)
+    {
+        string nome = "";
+
+        switch (mes)
+        {
+
+            case 1:
+                nome = "Janeiro";
+                break;
+            case 2:
+                nome = "Fevereiro";
+                break;
+            case 3:
+                nome = "Março";
+                break;
+            case 4:
+                nome = "Abril";
+                break;
+            case 5:
+                nome = "Maio";
+                break;
+            case 6:
+                nome = "Junho";
+                break;
+            case 7:
+                nome = "julho";
+                break;
+            case 8:
+                nome = "Agosto";
+                break;
+            case 9:
+                nome = "Setembro";
+                break;
+            case 10:
+                nome = "Outubro";
+                break;
+            case 11:
+                nome = "Novembro";
+                break;
+            case 12:
+                nome = "Dezembro";
+                break;
+            default:
+                break;
+        }
+
+        return nome;
+    }
+}
+
+    <div class="container-fluid">
+
+        <div class="row" style="justify-content:center;">
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary"><h6><b>Currently Users</b></h6></div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align:center;">
+                                    @usuariosAtivos
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success"><h6><b>Value / Hour</b></h6></div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">$@valorHora</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Dashboard</h1>
+        <p class="mb-4">Here you'll find information about your latest activities related to your parking.</p>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Last Active Customers</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Entrance:</th>
+                                <th>Leave:</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in usuarios)
+                            {
+                                <tr>
+                                    <td>@item.NomeUsuario</td>
+                                    <td>@item.PeriodoDe</td>
+                                    <td>@item.PeriodoAte</td>
+                                    <td><div style="float:right;">$@Math.Round(item.ValorGanho, 2)</div></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Latest Billings</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Mounth</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in recebimentos)
+                            {
+                                  <tr>
+                                      <td>@GetMes(item.Mes)/@item.Ano</td>
+                                      <td>$@item.Valor</td>
+                                  </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>

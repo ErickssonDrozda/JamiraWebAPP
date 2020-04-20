@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Solicitacoes em Aberto";
+    Layout = "~/Views/Shared1/_Layout.cshtml";
+    List<FEL_JAMIRA_WEB_APP.Models.Areas.Estacionamento.Solicitantes> solicitantes = ViewBag.Solicitacoes;
+}
+
+<div class="container-fluid" style="justify-content: center; display: block;">
+
+    @if (solicitantes.Count > 0)
+    {
+        foreach (var item in solicitantes)
+        {
+
+            <div class="card mb-4 py-3 border-bottom-primary" style="width:100%;" id="@item.IdSolicitacao--">
+                <div class="card-body" style="text-align: center;">
+                    <b>Name: </b>@item.NomeCliente - <b>Car: </b>@item.Carro - <b>Plate Car: </b>@item.PlacaCarro
+                    <div style="float: right;">
+                        <button class="btn btn-success btn-circle" onclick="Aprovar(@item.IdSolicitacao)">
+                            <i class="fas fa-check"></i>
+                        </button>
+                        <button class="btn btn-danger btn-circle" onclick="Reprovar(@item.IdSolicitacao)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div style="width: 100%;height: 100%;position: absolute;">
+                        <div id="--@item.IdSolicitacao" class="spinner-border text-primary" role="status" style="display:none;">
+                            <span class="sr-only">Wait...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+    else
+    {
+        <p style="text-align:center;"><b>You have no open requests.
+</b></p>
+    }
+</div>
+
+<div class="modal fade" id="fracasso" tabindex="-4" role="dialog" aria-labelledby="Fracasso" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="btn btn-danger btn-circle">
+                    :/
+                </button>
+            </div>
+            <div class="modal-body">
+                It was not possible to fulfill your request!
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="sucesso" tabindex="-3" role="dialog" aria-labelledby="Sucesso" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="btn btn-success btn-circle">
+                    <i class="fas fa-check"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                Request approved successfully!
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="sucessoRemocao" tabindex="-7" role="dialog" aria-labelledby="SucessoRemocao" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="btn btn-success btn-circle">
+                    <i class="fas fa-check"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                Request rejected successfully!
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/Areas/SolicitacaoAberto.js"></script>
+
