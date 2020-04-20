@@ -20,7 +20,7 @@ $(function() {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "Jamira/SendEmail",
+        url: "SendEmail",
         type: "POST",
         data: {
           name: name,
