@@ -11,7 +11,7 @@ Car entry and exit simulator, where the system has two types of users: the consu
 The system was developed using HTML, CSS, Javascript and C # with Entity Framework, dynamic pages with Razor.
 
 
-for more questions, please, visit the website http://jamira.gear.host/ in the "Quick Guide" tab
+for more questions, please, visit the website https://jamira.gear.host/ in the "Quick Guide" tab
 
 
 Ericksson de Souza Drozda.
