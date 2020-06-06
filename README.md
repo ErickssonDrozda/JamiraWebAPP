@@ -46,6 +46,11 @@ you will receive an alert from the system to proceed with the operation
 ...when you accept automaticaly increment on the active users inside the dashboard  
 ![teste](https://user-images.githubusercontent.com/53230835/83947413-19ca5680-a7ed-11ea-8646-ba7aef79c366.jpg)
 
+(Customer)  
+For the customer, you can see the status in the dashboard too
+![teste](https://user-images.githubusercontent.com/53230835/83947460-70d02b80-a7ed-11ea-85e2-6aaba7d03b58.jpg)
+
+
 
 for more questions, please, visit the website https://jamira.gear.host/ in the "Quick Guide" tab
 
