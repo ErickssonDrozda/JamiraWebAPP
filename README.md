@@ -29,7 +29,7 @@ This is a car entry and exit simulator, where the system has two types of users:
 ## Simulation
 Before simulate, you need to fill all requirements, the website will indicate you on the top of right side screen.  
 
-If you are a custumer, then need to buy credits.. but no worry.. this is a simulation to :).. follow and example below ->
+If you are a custumer, then need to buy credits.. but no worries.. this is a simulation too :)  follow an example below ->
 ![teste](https://user-images.githubusercontent.com/53230835/83947197-fa7ef980-a7eb-11ea-9793-ff839c240208.jpg)
 
 
