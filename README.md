@@ -1,6 +1,7 @@
 # Web Jamira
 
-![teste](https://user-images.githubusercontent.com/53230835/83946804-71ff5980-a7e9-11ea-9255-9eb21581ec96.jpg)
+![teste](https://user-images.githubusercontent.com/53230835/83947729-3e273280-a7ef-11ea-95e6-852abdd86a0b.jpg)
+
 
 jamira.. what is this ?  
 ... R: Course completion project adapted for a simulation within the website.
