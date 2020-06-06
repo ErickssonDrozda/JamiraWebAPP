@@ -32,6 +32,19 @@ Before simulate, you need to fill all requirements, the website will indicate yo
 If you are a custumer, then need to buy credits.. but no worries.. this is a simulation too :)  follow an example below ->
 ![teste](https://user-images.githubusercontent.com/53230835/83947197-fa7ef980-a7eb-11ea-9793-ff839c240208.jpg)
 
+### Now we start
+
+(Customer)  
+Already on the page simulator.. choose a park, and proceed to start operation
+![teste](https://user-images.githubusercontent.com/53230835/83947289-77aa6e80-a7ec-11ea-927b-df4c82816978.jpg)
+
+(Park)  
+The park need to accept your request  
+![teste](https://user-images.githubusercontent.com/53230835/83947371-dff95000-a7ec-11ea-96c5-fbddf62c0df0.jpg)
+
+you will receive an alert from the system to proceed with the operation  
+...when you accept automaticaly increment on the active users inside the dashboard  
+![teste](https://user-images.githubusercontent.com/53230835/83947413-19ca5680-a7ed-11ea-8646-ba7aef79c366.jpg)
 
 
 for more questions, please, visit the website https://jamira.gear.host/ in the "Quick Guide" tab
