@@ -50,6 +50,8 @@ you will receive an alert from the system to proceed with the operation
 For the customer, you can see the status in the dashboard too
 ![teste](https://user-images.githubusercontent.com/53230835/83947460-70d02b80-a7ed-11ea-85e2-6aaba7d03b58.jpg)
 
+When you want to comes out.. just go to Car simulator again.. and click on the green button inside the park information  
+![teste](https://user-images.githubusercontent.com/53230835/83947540-04096100-a7ee-11ea-8ce5-2fa7879769f6.jpg)
 
 
 for more questions, please, visit the website https://jamira.gear.host/ in the "Quick Guide" tab
