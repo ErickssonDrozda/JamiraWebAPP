@@ -55,11 +55,12 @@ When you want to comes out.. just go to Car simulator again.. and click on the g
 
 (Park)  
 Now the park finalize .. and automatically the system calcules the values envolved.. the customer and the park can see in the dashboards..  
-![teste](https://user-images.githubusercontent.com/53230835/83947540-04096100-a7ee-11ea-8ce5-2fa7879769f6.jpg)
+![teste](https://user-images.githubusercontent.com/53230835/83947652-bd683680-a7ee-11ea-8756-e62df0beb467.jpg)
+
+Done :)
 
 
+for more questions, please, visit the website https://jamira.gear.host/ in the "Quick Guide" tab  
 
-for more questions, please, visit the website https://jamira.gear.host/ in the "Quick Guide" tab
-
-
+Att,  
 Ericksson de Souza Drozda.
