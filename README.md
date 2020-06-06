@@ -9,7 +9,7 @@ jamira.. what is this ?
 ## Languages of Development
 
 Frontend: Using razor pages for dynamic website, implemented with css, and javascript.  
-Backend: C# using Entity framework.
+Backend: C# using Entity framework.  
 Database: SQL Server.
 
 ## How it works
