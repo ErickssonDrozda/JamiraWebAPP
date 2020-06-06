@@ -26,6 +26,13 @@ This is a car entry and exit simulator, where the system has two types of users:
 ![teste](https://user-images.githubusercontent.com/53230835/83946894-0e296080-a7ea-11ea-915a-1751529640d0.jpg)
 
 
+## Simulation
+Before simulate, you need to fill all requirements, the website will indicate you on the top of right side screen.  
+
+If you are a custumer, then need to buy credits.. but no worry.. this is a simulation to :).. follow and example below ->
+![teste](https://user-images.githubusercontent.com/53230835/83947197-fa7ef980-a7eb-11ea-9793-ff839c240208.jpg)
+
+
 
 for more questions, please, visit the website https://jamira.gear.host/ in the "Quick Guide" tab
 
