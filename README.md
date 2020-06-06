@@ -43,7 +43,7 @@ The park need to accept your request
 ![teste](https://user-images.githubusercontent.com/53230835/83947371-dff95000-a7ec-11ea-96c5-fbddf62c0df0.jpg)
 
 you will receive an alert from the system to proceed with the operation  
-...when you accept automaticaly increment on the active users inside the dashboard  
+...when you accept automatically increment on the active users inside the dashboard  
 ![teste](https://user-images.githubusercontent.com/53230835/83947413-19ca5680-a7ed-11ea-8646-ba7aef79c366.jpg)
 
 (Customer)  
@@ -52,6 +52,11 @@ For the customer, you can see the status in the dashboard too
 
 When you want to comes out.. just go to Car simulator again.. and click on the green button inside the park information  
 ![teste](https://user-images.githubusercontent.com/53230835/83947540-04096100-a7ee-11ea-8ce5-2fa7879769f6.jpg)
+
+(Park)  
+Now the park finalize .. and automatically the system calcules the values envolved.. the customer and the park can see in the dashboards..  
+![teste](https://user-images.githubusercontent.com/53230835/83947540-04096100-a7ee-11ea-8ce5-2fa7879769f6.jpg)
+
 
 
 for more questions, please, visit the website https://jamira.gear.host/ in the "Quick Guide" tab
